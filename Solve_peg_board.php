@@ -2,7 +2,7 @@
 
 class Solve_peg_board {
 
-  var $rows                       = 4;
+  	var $rows                       = 4;
 	var $peg_holes                  = 0;
 	var $num_pegs                   = 0;
 	var $winner_hole                = 8;
@@ -14,8 +14,7 @@ class Solve_peg_board {
 	/**
 	 * Session Constructor
 	 *
-	 * The constructor runs the session routines automatically
-	 * whenever the class is instantiated.
+	 * 
 	 */
 	public function __construct($num_rows=5)
 	{
