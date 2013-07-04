@@ -6,7 +6,6 @@ class Solve_peg_board {
 	var $peg_holes                  = 0;
 	var $num_pegs                   = 0;
 	var $winner_hole                = 8;
-	var $moves                      = array();
 	var $board                      = array();
 	var $moves_trail                = array();
 
@@ -207,52 +206,52 @@ class Solve_peg_board {
 					if( isset($board[$row_num][$horizontal_placement-1]) && $board[$row_num][$horizontal_placement-1] === TRUE && isset($board[$row_num][$horizontal_placement-2]) && $board[$row_num][$horizontal_placement-2] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num, $horizontal_placement-1),
-											'move_peg' => $this->find_hole_num($row_num, $horizontal_placement-2),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num, $horizontal_placement-1),
+									'move_peg' => $this->find_hole_num($row_num, $horizontal_placement-2),
+									);
 					}
 					if( isset($board[$row_num][$horizontal_placement+1]) && $board[$row_num][$horizontal_placement+1] === TRUE && isset($board[$row_num][$horizontal_placement+2]) && $board[$row_num][$horizontal_placement+2] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num, $horizontal_placement+1),
-											'move_peg' => $this->find_hole_num($row_num, $horizontal_placement+2),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num, $horizontal_placement+1),
+									'move_peg' => $this->find_hole_num($row_num, $horizontal_placement+2),
+									);
 					}
 					//Same check but verticals UP
 					if( isset($board[$row_num-1][$horizontal_placement-1]) && $board[$row_num-1][$horizontal_placement-1] === TRUE && isset($board[$row_num-2][$horizontal_placement-2]) && $board[$row_num-2][$horizontal_placement-2] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num-1, $horizontal_placement-1),
-											'move_peg' => $this->find_hole_num($row_num-2, $horizontal_placement-2),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num-1, $horizontal_placement-1),
+									'move_peg' => $this->find_hole_num($row_num-2, $horizontal_placement-2),
+									);
 					}
 					if( isset($board[$row_num-1][$horizontal_placement]) && $board[$row_num-1][$horizontal_placement] === TRUE && isset($board[$row_num-2][$horizontal_placement]) && $board[$row_num-2][$horizontal_placement] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num-1, $horizontal_placement),
-											'move_peg' => $this->find_hole_num($row_num-2, $horizontal_placement),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num-1, $horizontal_placement),
+									'move_peg' => $this->find_hole_num($row_num-2, $horizontal_placement),
+									);
 					}
 					//Same check but verticals DOWN
 					if( isset($board[$row_num+1][$horizontal_placement+1]) && $board[$row_num+1][$horizontal_placement+1] === TRUE && isset($board[$row_num+2][$horizontal_placement+2]) && $board[$row_num+2][$horizontal_placement+2] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num+1, $horizontal_placement+1),
-											'move_peg' => $this->find_hole_num($row_num+2, $horizontal_placement+2),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num+1, $horizontal_placement+1),
+									'move_peg' => $this->find_hole_num($row_num+2, $horizontal_placement+2),
+									);
 					}
 					if( isset($board[$row_num+1][$horizontal_placement]) && $board[$row_num+1][$horizontal_placement] === TRUE && isset($board[$row_num+2][$horizontal_placement]) && $board[$row_num+2][$horizontal_placement] === TRUE)
 					{
 						$available_moves[] = array(
-											'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
-											'jump_peg' => $this->find_hole_num($row_num+1, $horizontal_placement),
-											'move_peg' => $this->find_hole_num($row_num+2, $horizontal_placement),
-											);
+									'open_spot' => $this->find_hole_num($row_num, $horizontal_placement),
+									'jump_peg' => $this->find_hole_num($row_num+1, $horizontal_placement),
+									'move_peg' => $this->find_hole_num($row_num+2, $horizontal_placement),
+									);
 					}
 				}
 			}
