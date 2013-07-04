@@ -1,4 +1,4 @@
-PegBoardGame
+Peg Board Game
 ============
 
 Just a free time project that, hopefully, will find all the solutions for the Peg Board Game.
